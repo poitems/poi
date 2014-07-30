@@ -1,0 +1,25 @@
+@mixin test-mixin($val) {
+    background-color: $val;
+}
+
+@mixin mirror() {
+    -moz-transform:    scaleX(-1);
+    -o-transform:      scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform:         scaleX(-1);
+    filter:            FlipH;
+    -ms-filter:        "FlipH";
+}
+
+// 0-100 %
+@mixin opacity($val) {
+    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val})";
+    filter:         alpha(opacity=#{$val});
+    -moz-opacity:   $val / 100;
+    -khtml-opacity: $val / 100;
+    opacity:        $val / 100;
+}
+
+@function capitalize($string) {
+    @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}

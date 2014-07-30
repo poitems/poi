@@ -1,0 +1,22 @@
+extends partials/layout.jade
+
+block title
+    title My new title!
+
+block content
+    //div.markdown
+        :markdown
+            Yop, it worked >:D
+
+    //p Hello, world!!
+    //p(style="width: 60%;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptatum quisquam provident voluptas perferendis magni voluptate nesciunt nobis minus ex modi est ipsa repellendus quasi vel, ea doloribus consequatur numquam.
+    //img.mirror(src="http://placehold.it/350x150", alt="placeholder img")
+
+    // include item.jade
+
+    //div.markdown
+        :markdown
+            Sockets:
+
+    //include sockets.jade
+    include bootstrap.jade

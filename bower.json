@@ -1,0 +1,12 @@
+{
+  "name": "poi",
+  "version": "0.0.0",
+  "authors": [
+    "Morten Lindhardt <r3fuze@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.11.1"
+  }
+}
