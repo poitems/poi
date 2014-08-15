@@ -76,8 +76,5 @@ node_modules
 ### Sass ###
 .sass-cache
 
-# Don't include GGG's images for now.
-app/img
-
 # Don't push build folder
 build

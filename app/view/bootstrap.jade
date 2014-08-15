@@ -1,11 +1,35 @@
-.container
+.navbar.navbar-inverse.navbar-fixed-top
+    .container
+        .navbar-header
+            button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+            a.navbar-brand(href="#") #{appName}
+
+        .navbar-collapse.collapse
+            // placeholder form
+            form.navbar-form.navbar-right
+                .form-group
+                    input.form-control(type="text", placeholder="Email")
+
+                .form-group
+                    input.form-control(type="password", placeholder="Password")
+
+                button.btn.btn-success(type="submit") Sign in
+
+include item.jade
+
+//.container
     .row
-        .col-md-4 hey
+        .col-md-4 wat
         .col-md-4
-            p heto
+            p item
             include sockets.jade
         .col-md-4 sup
-.container
+
     // Example row of columns
     .row
         .col-md-4
@@ -26,3 +50,8 @@
                 | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             p
                 a.btn.btn-default(role='button', href='#') View details »
+
+    hr
+
+    footer
+        p This site is fan-made and not affiliated with Grinding Gear Games in any way.

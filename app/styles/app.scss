@@ -8,6 +8,10 @@ body {
     // Fix font beeing too bold on OS X (http://stackoverflow.com/q/8053389)
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .markdown {
