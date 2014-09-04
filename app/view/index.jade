@@ -4,19 +4,56 @@ block title
     title My new title!
 
 block content
-    //div.markdown
-        :markdown
-            Yop, it worked >:D
+    div.container
+        div.col-md-6
+            div.item-placeholder
 
-    //p Hello, world!!
-    //p(style="width: 60%;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptatum quisquam provident voluptas perferendis magni voluptate nesciunt nobis minus ex modi est ipsa repellendus quasi vel, ea doloribus consequatur numquam.
-    //img.mirror(src="http://placehold.it/350x150", alt="placeholder img")
+        div.col-md-6
 
-    // include item.jade
+            // Regular text input
+            div.form-group
+                label(for="item-name") Name
+                input(type="text", placeholder="Item Name").form-control#item-name
 
-    //div.markdown
-        :markdown
-            Sockets:
+            hr
 
-    //include sockets.jade
-    include bootstrap.jade
+            // Text input with button, disabled
+            div.form-group
+                label(for="item-type") Type
+
+                div.input-group
+                    input(type="text", placeholder="Item Type", disabled).form-control#item-type
+
+                    span.input-group-btn
+                        button(type="button", disabled).btn.btn-success
+                            i.fa.fa-plus.fa-fw
+
+                span.help-block This is a bunch of text that helps
+
+            hr
+
+            // Text input with button and error
+            div.form-group.has-error
+                label(for="item-type") Type
+
+                div.input-group
+                    input(type="text", placeholder="Item Type").form-control#item-type
+
+                    span.input-group-btn
+                        button(type="button").btn.btn-danger
+                            i.fa.fa-reddit.fa-fw
+
+
+    div(style="display:none;")#main
+        div.socket-1.socket-dex.socket
+        div.socket-2.socket-str.socket
+        div.socket-3.socket-dex.socket
+        div.socket-4.socket-dex.socket
+        div.socket-5.socket-int.socket
+        div.socket-6.socket-int.socket
+
+        div.link-1.link-hor.link
+        div.link-2.link-ver.link
+        div.link-3.link-hor.link
+        div.link-4.link-ver.link
+        div.link-5.link-hor.link

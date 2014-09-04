@@ -29,6 +29,7 @@ gulp.task "styles", ->
 
 libs = [
     "lodash"
+    "nunjucks"
 ]
 gulp.task "vendor", ->
     browserify()
@@ -45,6 +46,9 @@ gulp.task "browserify", ->
         .pipe mold.transformSourcesRelativeTo __dirname + "/app" # Fix sourcemaps in firefox
         .pipe source "bundle.js"
         .pipe gulp.dest "build/scripts"
+
+    gulp.src "./app/scripts/template/**/*"
+        .pipe gulp.dest "build/scripts/template"
 gulp.task "clean", (cb) ->
     del ["build"], cb
 
@@ -59,7 +63,7 @@ gulp.task "images", ->
             interlaced: true
         .pipe gulp.dest "build/img"
 
-gulp.task "build", ["jade", "styles"], ->
+gulp.task "build", ["jade", "styles", "browserify"], ->
     # process.stdout.write "\x07"
     reload()
 

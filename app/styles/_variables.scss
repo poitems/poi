@@ -1,0 +1,43 @@
+// ----------------------------------------------------------------------------
+// Named colors from named_colours.txt and site css
+// ----------------------------------------------------------------------------
+
+// Misc
+$default:              rgb(127, 127, 127); // TODO
+$value-default:        rgb(255, 255, 255); // TODO
+$pink:                 rgb(255, 192, 203); // pink?
+$dodgerblue:           rgb(30,  144, 255); // dodgerblue?
+$augmented:            rgb(136, 136, 255); // blue  - augmented color eg. ES buffed by %ES + other uses
+$unmet:                rgb(210, 0,   0);   // red   - unmet stat requirements
+$crafted:              rgb(184, 218, 242); // white - mods crafted by masters
+$corrupted:            rgb(210, 0,   0);   // red   - corrupted items. same as unmet
+
+// Not in names_colours
+$title:                rgb(231, 180, 120); // TODO
+$cosmetic-mods:        rgb(163, 141, 109); // microtransactions
+$flavour-text:         rgb(175, 96,  37);  // flavour text of unique items
+
+// Rarities
+$unique-item:          rgb(175, 96,  37);
+$rare-item:            rgb(255, 255, 119);
+$magic-item:           rgb(136, 136, 255);
+$white-item:           rgb(200, 200, 200);
+$gem-item:             rgb(27,  162, 155);
+$currency-item:        rgb(170, 158, 130);
+$quest-item:           rgb(74,  230, 58);
+
+// Damages types
+$physical-damage:      rgb(255, 255, 255);
+$fire-damage:          rgb(150, 0,   0);
+$cold-damage:          rgb(54,  100, 146);
+$lightning-damage:     rgb(255, 215, 0);
+$chaos-damage:         rgb(208, 32,  144);
+
+
+/* We don't use these
+$title:                rgb(231, 180, 120);
+$favour:               rgb(170, 158, 130);
+$supporterpacknewitem: rgb(180, 96,  0);
+$supporterpackitem:    rgb(163, 141, 109);
+$nemesismod:           rgb(255, 200, 0);
+$nemesismodoutline:   argb(220, 255, 40, 0);*/

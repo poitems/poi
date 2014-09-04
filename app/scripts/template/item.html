@@ -1,0 +1,112 @@
+<div class="item {{ frameTypes[frameType] }}">
+    <div class="item-container">
+        <div class="item-content">
+            <div class="header">
+                <div class="header-left"></div>
+                <div class="header-right"></div>
+
+                {% if name %}
+                    <span class="item-name">
+                        {{ name }}
+                    </span>
+                {% endif %}
+                <br>
+                {% if typeLine %}
+                    <span class="item-type">
+                        {{ typeLine }}
+                    </span>
+                {% endif %}
+            </div>
+
+            {% if properties %}
+                <div class="item-stats"> {# remove this? #}
+                    <span class="item-text">
+                        {% for prop in properties %}
+                            {{ prop | displayProperty(": ", true) }}
+                        {% endfor %}
+                    </span>
+                </div>
+            {% endif %}
+
+            {% if requirements %}
+                <div class="separator"></div>
+
+                <span class="item-text">
+                    {% for req in requirements %}
+                        {% if loop.first %}
+                            Requires
+                        {% else %}
+                            ,
+                        {% endif %}
+
+                        {{ req | displayProperty(" ", false) }}
+                    {% endfor %}
+                </span>
+            {% endif %}
+
+            {% if implicitMods %}
+                <div class="separator"></div>
+
+                <div class="implicit-mods">
+                    {% for mod in implicitMods %}
+                        {{ mod }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {# Kinda ugly, but it works. Fix later #}
+            {% if explicitMods %}
+                <div class="separator"></div>
+
+                <div class="explicit-mods">
+                    {% for mod in explicitMods %}
+                        {{ mod }}<br>
+                    {% endfor %}
+                </div>
+            {% elif corrupted %}
+                <div class="separator"></div>
+
+                <div class="explicit-mods">
+                    <span class="corrupted">Corrupted</span>
+                </div>
+            {% elif not identified %}
+                <div class="separator"></div>
+
+                <div class="explicit-mods">
+                    <span class="corrupted">Unidentified</span>
+                </div>
+            {% endif %}
+
+            {# TODO: craftedMods #}
+
+            {% if cosmeticMods %}
+                <div class="separator"></div>
+
+                <div class="cosmetic-mods">
+                    {% for mod in cosmeticMods %}
+                        {{ mod }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if mirrored %}
+                <div class="separator"></div>
+
+                {# Normalize syntax #}
+                <span class="color-augmented">Mirrored</span>
+            {% endif %}
+
+            {% if flavourText %}
+                <div class="separator"></div>
+
+                <div class="flavour-text">
+                    {% for text in flavourText %}
+                        {{ text }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {# TODO: Gem stuff #}
+        </div>
+    </div>
+</div>
